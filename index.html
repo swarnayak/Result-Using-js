@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="result.css">
+    <title>Document</title>
+</head>
+<body class="container" > 
+<form autocomplete="off" onsubmit="calculate(); showResult(); return false;">
+    <table>
+        <tr>
+            <td>Username:</td><td><input type="text" name="Username"></td>
+        </tr>
+        <tr>
+            <td>Maths:</td><td><input type="text" name="Maths Marks" ></td>
+        </tr>  
+        <tr>
+            <td>Science:</td><td><input type="text" name="Science Marks"></td>
+        </tr>
+        <tr>
+            <td>Computer:</td><td><input type="text" name="Computer Marks"></td>
+        </tr>
+        <tr>
+            <td>English:</td><td><input type="text" name="English Marks"></td>
+        </tr>
+        <tr>
+            <td>Total:</td><td><input type="text" name="total" readonly></td>
+        </tr>
+        <tr>
+            <td>Percentage:</td><td><input type="text" name="percentage" readonly></td>
+        </tr>
+    </table>
+    <button type="button" onclick="calculate()">Calculate</button>
+    <button type="submit">Submit</button> 
+</form>
+
+<div id="result"></div>
+<script src="./result.js"> </script>
+</body>
+</html> 
+
+
+
