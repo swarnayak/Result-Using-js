@@ -3,6 +3,7 @@ function calculate() {
     var science = parseFloat(document.getElementsByName("Science Marks")[0].value);
     var computer = parseFloat(document.getElementsByName("Computer Marks")[0].value);
     var english = parseFloat(document.getElementsByName("English Marks")[0].value);
+    
 
     if (isNaN(maths) || maths < 0 || maths > 100 ||
     isNaN(science) || science < 0 || science > 100 ||
@@ -19,6 +20,7 @@ function calculate() {
 }
 
 function showResult() {
+    calculate()
     var username = document.querySelector('input[name="Username"]').value;
     var total = document.querySelector('input[name="total"]').value;
     var percentage = document.querySelector('input[name="percentage"]').value;
@@ -26,4 +28,7 @@ function showResult() {
     // alert(result);
     var resultDiv = document.getElementById('result');
     resultDiv.innerHTML = "Username: " + username + "<br>Total Marks: " + total + "<br>Percentage: " + percentage + "%";
+}
+function enableSubmitButton() {
+    document.getElementById("submitButton").removeAttribute("disabled");
 }
