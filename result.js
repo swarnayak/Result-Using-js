@@ -21,14 +21,18 @@ function calculate() {
 
 function showResult() {
     calculate()
+    setTimeout(formReset, 1000)
     var username = document.querySelector('input[name="Username"]').value;
     var total = document.querySelector('input[name="total"]').value;
     var percentage = document.querySelector('input[name="percentage"]').value;
-    // var result = "Username: " + username + "\nTotal Marks: " + total + "\nPercentage: " + percentage + "%";
-    // alert(result);
     var resultDiv = document.getElementById('result');
     resultDiv.innerHTML = "Username: " + username + "<br>Total Marks: " + total + "<br>Percentage: " + percentage + "%";
+    console.log( `This form has a username of ${username}  total of ${total} and percentage ${percentage}`);
 }
 function enableSubmitButton() {
     document.getElementById("submitButton").removeAttribute("disabled");
+}
+function formReset() {
+    var formToReset = document.getElementById("loginForm");
+    formToReset.reset();
 }

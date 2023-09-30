@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body class="container" > 
-<form autocomplete="off" onsubmit="showResult(); return false;"> 
+<form autocomplete="off" onsubmit="showResult(); return false;"  id="loginForm"> 
     <table>
         <tr>
-            <td>Username:</td><td><input type="text" name="Username"></td>
+            <td>Username:</td><td><input type="text" id="Username" name="Username"></td>
         </tr>
         <tr>
-            <td>Maths:</td><td><input type="text" name="Maths Marks" ></td>
+            <td>Maths:</td><td><input type="text"  name="Maths Marks" ></td>
         </tr>  
         <tr>
             <td>Science:</td><td><input type="text" name="Science Marks"></td>
@@ -25,14 +25,12 @@
             <td>English:</td><td><input type="text" name="English Marks"></td>
         </tr>
         <tr>
-            <td>Total:</td><td><input type="text" name="total" readonly></td>
+            <td>Total:</td><td><input type="text" id="total" name="total" readonly></td>
         </tr>
         <tr>
-            <td>Percentage:</td><td><input type="text" name="percentage" readonly></td>
+            <td>Percentage:</td><td><input type="text" id="percentage" name="percentage" readonly></td>
         </tr>
     </table>
-    <!-- <button type="button" onclick="calculate()">Calculate</button>
-    <button type="submit"  disabled>Submit</button>  -->
     <button type="button" onclick="calculate(); enableSubmitButton()">Calculate</button>
     <button type="submit" id="submitButton" disabled>Submit</button>
 </form>
